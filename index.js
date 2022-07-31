@@ -41,21 +41,6 @@ app.post("/students", async (req, res) => {
     }
 });
 
-// app.post("/students", (req, res) => {
-//     knex("students")
-//         .insert({
-//             firstName: "Manish",
-//             lastName: "Mulchandnai",
-//         })
-//         .then(() => {
-//             knex.select()
-//                 .from("students")
-//                 .then((students) => {
-//                     res.send(students);
-//                 });
-//         });
-// });
-
 app.put("/students/:id", async (req, res) => {
     try {
         const { id } = req.params;
